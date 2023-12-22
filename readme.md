@@ -2,7 +2,7 @@
 
 Project này sử dụng thư viện Cytoscape để tạo ra một đồ thị. Đồ thị này bao gồm các nút và cạnh.
 ## kết quả
-!![Alt text](anh.png)
+![Alt text](anh.png)
 ## Các nút
 
 Có tổng cộng 10 nút trong đồ thị, được đánh số từ 1 đến 10.
