@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/cytoscape@3.2.0/dist/cytoscape.min.js"></script>
+</head>
+
+<body>
+    <div id="cy" style="width: 1000px; height: 600px;"></div>
+    <script>
+        var cy = cytoscape({
+            container: document.getElementById('cy'),
+            elements: [{
+                data: {
+                    id: '1'
+                }
+            }, {
+                data: {
+                    id: '2'
+                }
+            }, {
+                data: {
+                    id: '3'
+                }
+            }, {
+                data: {
+                    id: '4'
+                }
+            }, {
+                data: {
+                    id: '5'
+                }
+            }, {
+                data: {
+                    id: '6'
+                }
+            }, {
+                data: {
+                    id: '7'
+                }
+            }, {
+                data: {
+                    id: '8'
+                }
+            }, {
+                data: {
+                    id: '9'
+                }
+            }, {
+                data: {
+                    id: '10'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '2'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '3'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '4'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '5'
+                }
+            }, {
+                data: {
+                    source: '2',
+                    target: '3'
+                }
+            }, {
+                data: {
+                    source: '2',
+                    target: '6'
+                }
+            }, {
+                data: {
+                    source: '2',
+                    target: '7'
+                }
+            }, {
+                data: {
+                    source: '3',
+                    target: '4'
+                }
+            }, {
+                data: {
+                    source: '3',
+                    target: '8'
+                }
+            }, {
+                data: {
+                    source: '4',
+                    target: '5'
+                }
+            }, {
+                data: {
+                    source: '8',
+                    target: '9'
+                }
+            }, {
+                data: {
+                    source: '7',
+                    target: '9'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '9'
+                }
+            }, {
+                data: {
+                    source: '1',
+                    target: '6'
+                }
+            }, {
+                data: {
+                    source: '5',
+                    target: '8'
+                }
+            }, {
+                data: {
+                    source: '9',
+                    target: '1'
+                }
+            }, {
+                data: {
+                    source: '4',
+                    target: '6'
+                }
+            }, {
+                data: {
+                    source: '10',
+                    target: '5'
+                }
+            }],
+            style: [{
+                selector: 'node',
+                style: {
+                    'background-color': 'blue',
+                    'label': 'data(id)',
+                    'width': '5px',
+                    'height': '5px',
+                    'font-size': '5px'
+                }
+            }, {
+                selector: 'edge',
+                style: {
+
+                    'width': 1,
+                    'line-color': 'black',
+                }
+            }],
+            layout: {
+                name: 'concentric',
+                concentric: function(node) {
+                    return node.degree();
+                }
+            },
+
+        });
+    </script>
+</body>
+
+</html>
